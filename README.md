@@ -1,6 +1,6 @@
 # Clothing Store Web Application
 
-A full-stack MERN (MongoDB, Express, React, Node.js) web application for an online clothing store. Users can browse products, filter by categories and sizes. Logged-in users can add items to their shopping cart, securely check out, and view and manage their profiles and order history.
+A full-stack web application for an online clothing store. Users can browse products, manage a shopping cart, and place orders.
 
 ---
 
