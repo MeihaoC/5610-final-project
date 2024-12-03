@@ -9,9 +9,10 @@ A full-stack web application for an online clothing store. Users can browse prod
 
 This application allows users to:
 - Browse and filter products by category and size.
+- Search for products by name.
 - Add products to a shopping cart.
 - Manage cart items (adjust quantity, remove items).
-- Securely checkout and place orders.
+- Securely checkout and place orders with currency conversion.
 - View and manage user profiles and order history.
 
 ---
@@ -118,10 +119,12 @@ npm install express mongoose bcryptjs jsonwebtoken dotenv @faker-js/faker
 - React
 - React Router DOM
 - Axios
+- @fortawesome/react-fontawesome
+- @fortawesome/free-solid-svg-icons
 
 Install all dependencies:
 ```bash
-npm install react react-router-dom axios
+npm install react react-router-dom axios @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 ```
 
 ---
@@ -130,7 +133,9 @@ npm install react react-router-dom axios
 
 - **User Authentication**: Secure login and registration with JWT.
 - **Product Filtering**: Users can filter products by categories and sizes.
+- **Search Functionality**: Users can search for products from the navigation bar.
 - **Shopping Cart**: Add, update, and remove items from the cart.
+- **Currency Selection**: Users can choose a preferred currency during checkout.
 - **Checkout**: Securely place orders with user-provided shipping information.
 - **Order History**: View past orders and their statuses.
 
@@ -193,6 +198,7 @@ Below is the sample schema used for the database:
     }
   ],
   "totalAmount": "Number",
+  "currency": "String",
   "shippingAddress": "String",
   "status": "String",
   "orderDate": "Date"
